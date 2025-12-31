@@ -4,163 +4,16 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ابزارها • on9ion</title>
+    <title>کانفیگ های رایگان</title>
 
     <!-- فونت فارسی -->
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box
-        }
-
-        body {
-            font-family: 'Vazirmatn', sans-serif;
-            background: #f2f2f7;
-            /* رنگ پس‌زمینه شبیه iOS */
-            min-height: 100vh;
-            padding: 16px;
-            color: #1d1d1f;
-        }
-
-        header {
-            text-align: center;
-            padding: 40px 0 50px;
-        }
-
-        h1 {
-            font-size: 2.3rem;
-            font-weight: 700;
-            color: #111;
-        }
-
-        .subtitle {
-            color: #6b7280;
-            margin-top: 6px;
-            font-size: 1.05rem;
-        }
-
-        /* کارت‌ها */
-        .cards {
-            display: grid;
-            gap: 26px;
-            max-width: 450px;
-            margin: 0 auto;
-        }
-
-        .card {
-            background: #ffffff;
-            border-radius: 26px;
-            padding: 36px 26px;
-            backdrop-filter: blur(10px);
-            border: 1px solid #e4e4e7;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, .04);
-            transition: .3s;
-            cursor: pointer;
-            text-align: center;
-        }
-
-        .card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 18px 32px rgba(0, 0, 0, .08);
-        }
-
-        .logo {
-            width: 60px;
-            height: 60px;
-            margin-bottom: 15px;
-        }
-
-        /* صفحات */
-        .page {
-            display: none;
-            max-width: 520px;
-            margin: 0 auto;
-            padding-bottom: 80px;
-        }
-
-        .page.active {
-            display: block;
-        }
-
-        h2 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            font-weight: 700;
-            color: #111;
-        }
-
-        .back-btn {
-            display: inline-block;
-            margin-bottom: 24px;
-            background: #fff;
-            padding: 10px 16px;
-            border-radius: 12px;
-            font-size: .9rem;
-            box-shadow: 0 6px 14px rgba(0, 0, 0, .06);
-            cursor: pointer;
-            border: 1px solid #e4e4e7;
-        }
-
-        .item {
-            margin: 18px 0;
-            padding: 18px;
-            border-radius: 18px;
-            background: #fff;
-            border: 1px solid #e4e4e7;
-            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
-            display: flex;
-            align-items: center;
-            gap: 14px;
-        }
-
-        .item img {
-            width: 32px;
-            margin-left: 8px;
-        }
-
-        .item a {
-            color: #2463eb;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .item span {
-            flex: 1;
-        }
-
-        a:hover {
-            opacity: .7;
-        }
-
-        /* لینک گیت‌هاب */
-        .github-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            margin-top: 18px;
-            background: #fff;
-            padding: 8px 14px;
-            border-radius: 12px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: #000;
-            text-decoration: none;
-            border: 1px solid #e4e4e7;
-            transition: .25s;
-        }
-
-        .github-btn:hover {
-            transform: translateY(-3px);
-        }
-
-        .github-btn img {
-            width: 20px;
-            height: 20px;
-        }
-    </style>
+    <!-- فونت انگلیسی -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- External Styles -->
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
@@ -168,85 +21,292 @@
     <!-- صفحه اصلی -->
     <div id="home" class="page active">
         <header>
-            <h1>ابزارها</h1>
+            <h1>کانفیگ های رایگان</h1>
             <p class="subtitle">توسعه و گردآوری از on9ion</p>
 
             <a href="https://github.com/redo9ion" class="github-btn" target="_blank">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="">
+                <i class="fab fa-github"></i>
                 GitHub
             </a>
         </header>
 
         <div class="cards">
             <div class="card" onclick="openPage('softwares')">
-                <img class="logo" src="https://cdn-icons-png.flaticon.com/512/1828/1828817.png" alt="Apps">
+                <i class="fas fa-layer-group"></i>
                 <h3>نرم‌افزارها</h3>
                 <p>دانلود و معرفی اپلیکیشن‌های موردنیاز</p>
             </div>
             <div class="card" onclick="openPage('configs')">
-                <img class="logo" src="https://cdn-icons-png.flaticon.com/512/5948/5948585.png" alt="Config">
+                <i class="fas fa-shield-halved"></i>
                 <h3>کانفیگ رایگان</h3>
-                <p>آپدیت روزانه • تست‌شده و آماده اتصال</p>
+                <p>دسترسی سریع به سرورهای تست شده</p>
             </div>
         </div>
     </div>
 
     <!-- صفحه نرم‌افزارها -->
-    <div id="softwares" class="page">
-        <span class="back-btn" onclick="openPage('home')">🔙 بازگشت</span>
-        <h2>📱 نرم‌افزارهای پیشنهادی</h2>
+    <div id="softwares" class="page" style="display: none;">
+        <span class="back-btn" onclick="openPage('home')">
+            <i class="fas fa-arrow-right"></i>
+            بازگشت
+        </span>
+        <h2><i class="fas fa-mobile-screen-button"></i> نرم‌افزارها</h2>
 
-        <div class="item">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg">
-            <span>V2RayNG • اندروید</span>
-            <a href="#">دانلود</a>
+        <!-- اندروید -->
+        <div class="category-title"><i class="fab fa-android"></i> بخش اندروید</div>
+        <div class="software-grid">
+            <a href="https://github.com/2dust/v2rayNG/releases" class="sw-card github-badge" target="_blank">
+                <img src="assets/images/v2rayng.png" alt="v2rayNG" onerror="this.src=this.src.replace('.png', '.webp')">
+                <h4>v2rayNG</h4>
+            </a>
+            <a href="#" class="sw-card" target="_blank">
+                <img src="assets/images/mahsang.png" alt="MahsaNG" onerror="this.src=this.src.replace('.png', '.webp')">
+                <h4>MahsaNG</h4>
+            </a>
+            <a href="https://github.com/hiddify/hiddify-next/releases" class="sw-card github-badge" target="_blank">
+                <img src="assets/images/hiddify.png" alt="Hiddify" onerror="this.src=this.src.replace('.png', '.webp')">
+                <h4>Hiddify</h4>
+            </a>
+            <a href="https://github.com/bepass-org/oblivion/releases" class="sw-card github-badge" target="_blank">
+                <img src="assets/images/oblivion.png" alt="Oblivion"
+                    onerror="this.src=this.src.replace('.png', '.webp')">
+                <h4>Oblivion</h4>
+            </a>
+            <a href="#" class="sw-card github-badge" target="_blank">
+                <img src="assets/images/defyx.png" alt="Defyx VPN" onerror="this.src=this.src.replace('.png', '.webp')">
+                <h4>Defyx VPN</h4>
+            </a>
+            <a href="https://github.com/matsuri-dayo/matsuri/releases" class="sw-card github-badge" target="_blank">
+                <img src="assets/images/matsuri.png" alt="Matsuri" onerror="this.src=this.src.replace('.png', '.webp')">
+                <h4>Matsuri</h4>
+            </a>
+            <a href="#" class="sw-card github-badge" target="_blank">
+                <img src="assets/images/nekobox.png" alt="NekoBox" onerror="this.src=this.src.replace('.png', '.webp')">
+                <h4>NekoBox</h4>
+            </a>
+            <a href="#" class="sw-card github-badge" target="_blank">
+                <img src="assets/images/begzar.png" alt="Begzar" onerror="this.src=this.src.replace('.png', '.webp')">
+                <h4>Begzar</h4>
+            </a>
+            <a href="#" class="sw-card" target="_blank"><img src="assets/images/freedom_guard.png" alt="Freedom Guard"
+                    onerror="this.src=this.src.replace('.png', '.webp')">
+                <h4>Freedom Guard</h4>
+            </a>
+            <a href="#" class="sw-card" target="_blank"><img src="assets/images/proxy_cloud.png" alt="Proxy Cloud"
+                    onerror="this.src=this.src.replace('.png', '.webp')">
+                <h4>Proxy Cloud</h4>
+            </a>
+            <a href="#" class="sw-card" target="_blank"><img src="assets/images/napsternetv.png" alt="NapsternetV"
+                    onerror="this.src=this.src.replace('.png', '.webp')">
+                <h4>NapsternetV</h4>
+            </a>
+            <a href="#" class="sw-card github-badge" target="_blank"><img src="assets/images/v2flyng.png" alt="v2flyNG"
+                    onerror="this.src=this.src.replace('.png', '.webp')">
+                <h4>v2flyNG</h4>
+            </a> <a href="https://github.com/Jigsaw-Code/outline-client/releases" class="sw-card" target="_blank"><img
+                    src="assets/images/outline.png" alt="Outline" onerror="this.src=this.src.replace('.png', '.webp')">
+                <h4>Outline</h4>
+            </a>
+            <a href="#" class="sw-card" target="_blank"><img src="assets/images/psiphon.png" alt="Psiphon"
+                    onerror="this.src=this.src.replace('.png', '.webp')">
+                <h4>Psiphon</h4>
+            </a>
+            <a href="#" class="sw-card" target="_blank"><img src="assets/images/orbot.png" alt="Orbot"
+                    onerror="this.src=this.src.replace('.png', '.webp')">
+                <h4>Orbot</h4>
+            </a>
+            <a href="#" class="sw-card" target="_blank"><img src="assets/images/amnezia.png" alt="Amnezia"
+                    onerror="this.src=this.src.replace('.png', '.webp')">
+                <h4>Amnezia</h4>
+            </a>
         </div>
 
-        <div class="item">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg">
-            <span>Hiddify • ویندوز / اندروید</span>
-            <a href="#">دریافت</a>
+        <!-- آیفون -->
+        <div class="category-title"><i class="fab fa-apple"></i> بخش آیفون</div>
+        <div class="software-grid">
+            <a href="#" class="sw-card" target="_blank"><img src="assets/images/streisand.png" alt="Streisand"
+                    onerror="this.src=this.src.replace('.png', '.webp')">
+                <h4>Streisand</h4>
+            </a>
+            <a href="#" class="sw-card github-badge" target="_blank"><img src="assets/images/hiddify.png" alt="Hiddify"
+                    onerror="this.src=this.src.replace('.png', '.webp')">
+                <h4>Hiddify</h4>
+            </a>
+            <a href="#" class="sw-card github-badge" target="_blank"><img src="assets/images/defyx.png" alt="Defyx VPN"
+                    onerror="this.src=this.src.replace('.png', '.webp')">
+                <h4>Defyx VPN</h4>
+            </a>
+            <a href="#" class="sw-card" target="_blank"><img src="assets/images/napsternetv.png" alt="NapsternetV"
+                    onerror="this.src=this.src.replace('.png', '.webp')">
+                <h4>NapsternetV</h4>
+            </a>
+            <a href="#" class="sw-card" target="_blank"><img src="assets/images/v2box.png" alt="V2Box"
+                    onerror="this.src=this.src.replace('.png', '.webp')">
+                <h4>V2Box</h4>
+            </a>
+            <a href="#" class="sw-card" target="_blank"><img src="assets/images/http_injector.png" alt="Http Injector"
+                    onerror="this.src=this.src.replace('.png', '.webp')">
+                <h4>Http Injector</h4>
+            </a>
+            <a href="#" class="sw-card" target="_blank"><img src="assets/images/fair.png" alt="Fair"
+                    onerror="this.src=this.src.replace('.png', '.webp')">
+                <h4>Fair</h4>
+            </a>
+            <a href="#" class="sw-card" target="_blank"><img src="assets/images/v2lite.png" alt="V2Lite"
+                    onerror="this.src=this.src.replace('.png', '.webp')">
+                <h4>V2Lite</h4>
+            </a>
+            <a href="#" class="sw-card" target="_blank"><img src="assets/images/wireguard.png" alt="WireGuard"
+                    onerror="this.src=this.src.replace('.png', '.webp')">
+                <h4>WireGuard</h4>
+            </a>
+            <a href="#" class="sw-card" target="_blank"><img src="assets/images/outline.png" alt="Outline"
+                    onerror="this.src=this.src.replace('.png', '.webp')">
+                <h4>Outline</h4>
+            </a>
+            <a href="#" class="sw-card" target="_blank"><img src="assets/images/psiphon.png" alt="Psiphon"
+                    onerror="this.src=this.src.replace('.png', '.webp')">
+                <h4>Psiphon</h4>
+            </a>
+            <a href="#" class="sw-card" target="_blank"><img src="assets/images/orbot.png" alt="Orbot"
+                    onerror="this.src=this.src.replace('.png', '.webp')">
+                <h4>Orbot</h4>
+            </a>
+            <a href="#" class="sw-card" target="_blank"><img src="assets/images/amnezia.png" alt="Amnezia"
+                    onerror="this.src=this.src.replace('.png', '.webp')">
+                <h4>Amnezia</h4>
+            </a>
         </div>
 
-        <div class="item">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg">
-            <span>Outline • iOS / Android / Desktop</span>
-            <a href="#">دانلود</a>
+        <!-- ویندوز -->
+        <div class="category-title"><i class="fab fa-windows"></i> بخش ویندوز</div>
+        <div class="software-grid">
+            <a href="#" class="sw-card" target="_blank"><img src="assets/images/v2rayn.png" alt="v2rayN"
+                    onerror="this.src=this.src.replace('.png', '.webp')">
+                <h4>v2rayN</h4>
+            </a>
+            <a href="#" class="sw-card github-badge" target="_blank"><img src="assets/images/hiddify.png" alt="Hiddify"
+                    onerror="this.src=this.src.replace('.png', '.webp')">
+                <h4>Hiddify</h4>
+            </a>
+            <a href="#" class="sw-card" target="_blank"><img src="assets/images/oblivion.png" alt="Oblivion"
+                    onerror="this.src=this.src.replace('.png', '.webp')">
+                <h4>Oblivion</h4>
+            </a>
+            <a href="#" class="sw-card" target="_blank"><img src="assets/images/v2rayn_pro.png" alt="v2rayN-Pro"
+                    onerror="this.src=this.src.replace('.png', '.webp')">
+                <h4>v2rayN-Pro</h4>
+            </a>
+            <a href="#" class="sw-card" target="_blank"><img src="assets/images/begzar.png" alt="Begzar"
+                    onerror="this.src=this.src.replace('.png', '.webp')">
+                <h4>Begzar</h4>
+            </a>
+            <a href="#" class="sw-card" target="_blank"><img src="assets/images/freedom_guard.png" alt="Freedom Guard"
+                    onerror="this.src=this.src.replace('.png', '.webp')">
+                <h4>Freedom Guard</h4>
+            </a>
+            <a href="#" class="sw-card" target="_blank"><img src="assets/images/proxy_cloud.png" alt="Proxy Cloud"
+                    onerror="this.src=this.src.replace('.png', '.webp')">
+                <h4>Proxy Cloud</h4>
+            </a>
+            <a href="#" class="sw-card" target="_blank"><img src="assets/images/nekoray.png" alt="nekoRay"
+                    onerror="this.src=this.src.replace('.png', '.webp')">
+                <h4>nekoRay</h4>
+            </a>
+            <a href="#" class="sw-card" target="_blank"><img src="assets/images/qv2ray.png" alt="Qv2ray"
+                    onerror="this.src=this.src.replace('.png', '.webp')">
+                <h4>Qv2ray</h4>
+            </a>
+            <a href="#" class="sw-card" target="_blank"><img src="assets/images/outline.png" alt="Outline"
+                    onerror="this.src=this.src.replace('.png', '.webp')">
+                <h4>Outline</h4>
+            </a>
+            <a href="#" class="sw-card" target="_blank"><img src="assets/images/psiphon.png" alt="Psiphon"
+                    onerror="this.src=this.src.replace('.png', '.webp')">
+                <h4>Psiphon</h4>
+            </a>
         </div>
 
-        <div class="item">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg">
-            <span>Clash • ویندوز / مک / لینوکس</span>
-            <a href="#">دانلود</a>
+        <!-- مک / لینوکس -->
+        <div class="category-title"><i class="fab fa-linux"></i> لینوکس/مک</div>
+        <div class="software-grid">
+            <a href="#" class="sw-card" target="_blank"><img src="assets/images/hiddify.png" alt="Hiddify"
+                    onerror="this.src=this.src.replace('.png', '.webp')">
+                <h4>Hiddify</h4>
+            </a>
+            <a href="#" class="sw-card" target="_blank"><img src="assets/images/oblivion.png" alt="Oblivion"
+                    onerror="this.src=this.src.replace('.png', '.webp')">
+                <h4>Oblivion</h4>
+            </a>
+            <a href="#" class="sw-card" target="_blank"><img src="assets/images/freedom_guard.png" alt="Freedom Guard"
+                    onerror="this.src=this.src.replace('.png', '.webp')">
+                <h4>Freedom Guard</h4>
+            </a>
+            <a href="#" class="sw-card" target="_blank"><img src="assets/images/proxy_cloud.png" alt="Proxy Cloud"
+                    onerror="this.src=this.src.replace('.png', '.webp')">
+                <h4>Proxy Cloud</h4>
+            </a>
+            <a href="#" class="sw-card" target="_blank"><img src="assets/images/qv2ray.png" alt="Qv2ray"
+                    onerror="this.src=this.src.replace('.png', '.webp')">
+                <h4>Qv2ray</h4>
+            </a>
+            <a href="#" class="sw-card" target="_blank"><img src="assets/images/nekoray.png" alt="nekoRay"
+                    onerror="this.src=this.src.replace('.png', '.webp')">
+                <h4>nekoRay</h4>
+            </a> <a href="#" class="sw-card" target="_blank"><img src="assets/images/v2box.png" alt="V2Box"
+                    onerror="this.src=this.src.replace('.png', '.webp')">
+                <h4>V2Box</h4>
+            </a>
+            <a href="#" class="sw-card" target="_blank"><img src="assets/images/outline.png" alt="Outline"
+                    onerror="this.src=this.src.replace('.png', '.webp')">
+                <h4>Outline</h4>
+            </a>
         </div>
     </div>
 
     <!-- صفحه کانفیگ رایگان -->
-    <div id="configs" class="page">
-        <span class="back-btn" onclick="openPage('home')">🔙 بازگشت</span>
-        <h2>⚡️ کانفیگ رایگان تست‌شده</h2>
+    <div id="configs" class="page" style="display: none;">
+        <span class="back-btn" onclick="openPage('home')">
+            <i class="fas fa-arrow-right"></i>
+            بازگشت
+        </span>
+        <h2><i class="fas fa-bolt-lightning"></i> پروتکل‌ها</h2>
 
-        <div class="item">
-            <img src="https://cdn-icons-png.flaticon.com/512/1077/1077046.png">
-            <span>VLESS + Reality</span>
-            <a href="https://t.me/s/config_channel_1" target="_blank">مشاهده</a>
-        </div>
+        <div class="config-container">
+            <p style="margin-bottom: 16px; font-weight: 600; color: #4b5563;">نوع پروتکل را انتخاب کنید:</p>
+            <select id="protocolSelect" class="protocol-select" onchange="updateConfigLink()">
+                <option value="">انتخاب کنید...</option>
+                <option
+                    value="https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/Protocols/ss.txt">
+                    SS Protocol</option>
+                <option
+                    value="https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/Protocols/trojan.txt">
+                    Trojan Protocol</option>
+                <option
+                    value="https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/Protocols/vless.txt">
+                    VLESS Protocol</option>
+                <option
+                    value="https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/Protocols/vmess.txt">
+                    VMess Protocol</option>
+                <option
+                    value="https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/all_configs.txt">
+                    All Configs</option>
+            </select>
 
-        <div class="item">
-            <img src="https://cdn-icons-png.flaticon.com/512/888/888879.png">
-            <span>Hysteria 2</span>
-            <a href="https://t.me/s/config_channel_2" target="_blank">مشاهده</a>
+            <div id="configDisplay" class="config-link-box">
+                <div id="configUrlText"
+                    style="margin-bottom: 12px; font-family: monospace; font-size: 0.8rem; color: #1e40af; overflow-wrap: break-word;">
+                </div>
+                <button class="copy-btn" onclick="copyConfigLink()">
+                    <i class="fas fa-copy"></i>
+                    کپی لینک
+                </button>
+            </div>
         </div>
     </div>
 
-    <script>
-        function openPage(page) {
-            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-            document.getElementById(page).classList.add('active');
-            window.scrollTo(0, 0);
-        }
-    </script>
-
+    <!-- Scripts -->
+    <script src="assets/js/scripts.js"></script>
 </body>
 
 </html>
