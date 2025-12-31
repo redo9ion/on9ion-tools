@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ابزارها • on9ion</title>
+
+    <!-- فونت فارسی -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background: #f2f2f7;
+            /* رنگ پس‌زمینه شبیه iOS */
+            min-height: 100vh;
+            padding: 16px;
+            color: #1d1d1f;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0 50px;
+        }
+
+        h1 {
+            font-size: 2.3rem;
+            font-weight: 700;
+            color: #111;
+        }
+
+        .subtitle {
+            color: #6b7280;
+            margin-top: 6px;
+            font-size: 1.05rem;
+        }
+
+        /* کارت‌ها */
+        .cards {
+            display: grid;
+            gap: 26px;
+            max-width: 450px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 26px;
+            padding: 36px 26px;
+            backdrop-filter: blur(10px);
+            border: 1px solid #e4e4e7;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, .04);
+            transition: .3s;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 32px rgba(0, 0, 0, .08);
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 15px;
+        }
+
+        /* صفحات */
+        .page {
+            display: none;
+            max-width: 520px;
+            margin: 0 auto;
+            padding-bottom: 80px;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            color: #111;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 24px;
+            background: #fff;
+            padding: 10px 16px;
+            border-radius: 12px;
+            font-size: .9rem;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, .06);
+            cursor: pointer;
+            border: 1px solid #e4e4e7;
+        }
+
+        .item {
+            margin: 18px 0;
+            padding: 18px;
+            border-radius: 18px;
+            background: #fff;
+            border: 1px solid #e4e4e7;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .item img {
+            width: 32px;
+            margin-left: 8px;
+        }
+
+        .item a {
+            color: #2463eb;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .item span {
+            flex: 1;
+        }
+
+        a:hover {
+            opacity: .7;
+        }
+
+        /* لینک گیت‌هاب */
+        .github-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 18px;
+            background: #fff;
+            padding: 8px 14px;
+            border-radius: 12px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #000;
+            text-decoration: none;
+            border: 1px solid #e4e4e7;
+            transition: .25s;
+        }
+
+        .github-btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .github-btn img {
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- صفحه اصلی -->
+    <div id="home" class="page active">
+        <header>
+            <h1>ابزارها</h1>
+            <p class="subtitle">توسعه و گردآوری از on9ion</p>
+
+            <a href="https://github.com/redo9ion" class="github-btn" target="_blank">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="">
+                GitHub
+            </a>
+        </header>
+
+        <div class="cards">
+            <div class="card" onclick="openPage('softwares')">
+                <img class="logo" src="https://cdn-icons-png.flaticon.com/512/1828/1828817.png" alt="Apps">
+                <h3>نرم‌افزارها</h3>
+                <p>دانلود و معرفی اپلیکیشن‌های موردنیاز</p>
+            </div>
+            <div class="card" onclick="openPage('configs')">
+                <img class="logo" src="https://cdn-icons-png.flaticon.com/512/5948/5948585.png" alt="Config">
+                <h3>کانفیگ رایگان</h3>
+                <p>آپدیت روزانه • تست‌شده و آماده اتصال</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- صفحه نرم‌افزارها -->
+    <div id="softwares" class="page">
+        <span class="back-btn" onclick="openPage('home')">🔙 بازگشت</span>
+        <h2>📱 نرم‌افزارهای پیشنهادی</h2>
+
+        <div class="item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg">
+            <span>V2RayNG • اندروید</span>
+            <a href="#">دانلود</a>
+        </div>
+
+        <div class="item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg">
+            <span>Hiddify • ویندوز / اندروید</span>
+            <a href="#">دریافت</a>
+        </div>
+
+        <div class="item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg">
+            <span>Outline • iOS / Android / Desktop</span>
+            <a href="#">دانلود</a>
+        </div>
+
+        <div class="item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg">
+            <span>Clash • ویندوز / مک / لینوکس</span>
+            <a href="#">دانلود</a>
+        </div>
+    </div>
+
+    <!-- صفحه کانفیگ رایگان -->
+    <div id="configs" class="page">
+        <span class="back-btn" onclick="openPage('home')">🔙 بازگشت</span>
+        <h2>⚡️ کانفیگ رایگان تست‌شده</h2>
+
+        <div class="item">
+            <img src="https://cdn-icons-png.flaticon.com/512/1077/1077046.png">
+            <span>VLESS + Reality</span>
+            <a href="https://t.me/s/config_channel_1" target="_blank">مشاهده</a>
+        </div>
+
+        <div class="item">
+            <img src="https://cdn-icons-png.flaticon.com/512/888/888879.png">
+            <span>Hysteria 2</span>
+            <a href="https://t.me/s/config_channel_2" target="_blank">مشاهده</a>
+        </div>
+    </div>
+
+    <script>
+        function openPage(page) {
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            document.getElementById(page).classList.add('active');
+            window.scrollTo(0, 0);
+        }
+    </script>
+
+</body>
+
+</html>
